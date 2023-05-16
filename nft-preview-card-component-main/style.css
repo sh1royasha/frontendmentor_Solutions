@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue-main: hsl(217, 54%, 11%);
+    --Very-dark-blue-card: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body{
+    background-color: var(--Very-dark-blue-main);
+    font-family: 'Outfit', sans-serif;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card{
+    background-color: var(--Very-dark-blue-card);
+    padding: 1rem;
+    border-radius: 12px;
+    width: 300px;
+}
+
+.card-header{
+    position: relative;
+}
+
+.card-header:hover .icon-preview{
+    display: inline;
+    cursor: pointer;
+}
+
+.card-header:hover .preview{
+    width: 100%;
+    height: 99%;
+    background: var(--Cyan);
+    position: absolute;
+    top: 0;
+    opacity: 0.5;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.card .icon-preview{
+    position: absolute;
+    left: 110px;
+    bottom: 110px;
+    display: none;
+}
+
+.card .card-img{
+    width: 100%;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.card .card-info h3{
+    color: var(--White);
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.card .card-info h3:hover,
+.card-footer .user-name:hover{
+    color: var(--Cyan);
+}
+
+.card .card-info p{
+    color: var(--Soft-blue);
+}
+
+.card-info-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.card-info-price .item{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.card-info-price .item img{
+    width: 10px;
+}
+
+.card-info-price .item:first-child span{
+    color: var(--Cyan);
+}
+
+.card-info-price .item:nth-child(2) span{
+    color: var(--Soft-blue);
+}
+
+.card-footer{
+    border-top: 1px solid var(--Very-dark-blue-line);
+    display: flex;
+    padding: 1rem 0 .5rem;
+}
+
+.card-footer img{
+    width: 25px;
+    border: 2px solid var(--White);
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.card-footer span{
+    color: var(--Soft-blue);
+}
+
+.card-footer .user-name{
+    color: var(--White);
+    cursor: pointer;
+}
