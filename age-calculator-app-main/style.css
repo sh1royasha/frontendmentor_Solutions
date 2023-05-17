@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Purple: hsl(259, 100%, 65%);
+    --Light-red: hsl(0, 100%, 67%);
+    --White: hsl(0, 0%, 100%);
+    --Off-white: hsl(0, 0%, 94%);
+    --Light-grey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--Off-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+main{
+    background-color: var(--White);
+    border-radius: 20px;
+    border-bottom-right-radius: 40%;
+    position: relative;
+    width: 750px;
+    height: 530px;
+    padding: 50px;
+}
+
+main section.inputs{
+    display: flex;
+    margin-bottom: 35px;
+}
+
+main .item{
+    display: flex;
+    flex-direction: column;
+}
+
+main .item label{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: var(--Smokey-grey);
+}
+
+main .item input{
+    font-size: 32px;
+    width: 150px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 20px;
+    border-radius: 10px;
+    border: 0.5px solid var(--Light-grey);
+    outline: none;
+    letter-spacing: 2px;
+    caret-color: var(--Purple);
+    height: 70px;
+    font-weight: 800;
+}
+
+main .item.error input{
+    border-color: var(--Light-red);
+}
+
+main .item.error label{
+    color: var(--Light-red);
+}
+
+main .item.error small{
+    margin-top: 5px;
+    font-style: italic;
+    color: var(--Light-red);
+}
+
+main hr{
+    border: 0;
+    height: 1px;
+    background: var(--Light-grey);
+}
+
+main button{
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background: var(--Purple);
+    right: 50px;
+    margin-top: -43px;
+    cursor: pointer;
+}
+
+main button:hover{
+    background: var(--Off-black);
+}
+
+main section.info h1{
+    font-size: 60px;
+    font-style: italic;
+}
+
+main section.info h1 span{
+    color: var(--Purple);
+    margin-right: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+
+    main section.inputs{
+        justify-content: center;
+        margin-bottom: 70px;
+    }
+
+   main .inputs input{
+    width: 120px;
+   } 
+
+   main button{
+    right: 192px;
+    width: 70px;
+    height: 70px;
+   }
+
+   main button img{
+    width: 30px;
+   }
+
+   main{
+    padding: 1rem;
+    width: 450px;
+   }
+
+   main .item:nth-child(3) input{
+    margin-right: 0;
+   }
+
+   main .info{
+    padding: 2rem;
+   }
+
+}
