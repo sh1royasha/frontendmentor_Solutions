@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root{
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+
+
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: url(./images/pattern-background-desktop.svg) no-repeat ;
+    background-color: hsl(225, 100%, 94%);
+}
+
+.card{
+    width: 320px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.card_img{
+    background-image: url(./images/illustration-hero.svg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    height: 180px;
+}
+
+.card_info{
+    padding: 15px 20px;
+    text-align: center;
+    & .info_title{
+        color: var(--Dark-blue);
+        margin-top: 15px;
+    }
+    & .info_paragraph{
+        line-height: 1.5rem;
+        font-size: 14px;
+        margin: 20px 0;
+        color: var(--Desaturated-blue);
+    }
+    & .info_summary{
+        background-color: var(--Very-pale-blue);
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 80px;
+        margin: 20px 0;
+        & .summary_detail{
+            text-align: left;
+            & h2{
+                color: var(--Dark-blue);
+                font-weight: 900;
+                font-size: 1rem;
+            }
+            & span{
+                color: var(--Desaturated-blue);
+            }
+        }
+        & .summary_change{
+            color: var(--Bright-blue);
+            font-weight: 700;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+    }
+    & .btn{
+        border: none;
+        background: none;
+        border-radius: 10px;
+        width: 100%;
+        font-weight: 700;
+        cursor: pointer;
+        padding: 12px 24px;
+        margin: 5px 0;
+        
+    }
+    & .btn_primary{
+        background-color: var(--Bright-blue);
+        color: #fff;
+        box-shadow: 1px 16px 8px 2px rgba(0, 0, 0, 0.11);
+        &:hover{
+            filter: opacity(75%);        }
+    }
+
+    & .btn_second{
+        color: var(--Desaturated-blue);
+        font-weight: 800;
+        &:hover{
+            color: #000;
+        }
+    }
+}
+
+
